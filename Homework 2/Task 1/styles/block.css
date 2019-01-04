@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.row1{
+    display: inline-block;
+    width: 49.6vw;
+    height: 10vh;
+    background: orange;
+}
+
+.row2{
+    display: inline-block;
+    width: 99.5vw;
+    height: 39vh;
+    background: yellow;
+}
+
+.row3{
+    display: inline-block;
+    width: 33vw;
+    height: 29vh;
+    background: rgb(111, 191, 238);
+}
+
+.row4{
+    display: inline-block;
+    width: 24.65vw;
+    height: 19vh;
+    background: gray;
+}

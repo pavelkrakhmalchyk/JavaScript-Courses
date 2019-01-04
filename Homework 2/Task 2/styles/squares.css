@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.square1{
+    position: relative;
+    height: 21vw;
+    width: 21vw;
+    top: 5vw;
+    left: 28vw;
+    background: red;
+    z-index: 1;
+}
+
+.square2{
+    position: relative;
+    height: 21vw;
+    width: 21vw;
+    top: -10vw;
+    left: 35vw;
+    z-index: 3;
+    background: rgb(26, 235, 26);
+}
+
+.square3{
+    position: relative;
+    height: 21vw;
+    width: 21vw;
+    top: -25vw;
+    left: 42vw;
+    z-index: 2;
+    background: blue;
+}
