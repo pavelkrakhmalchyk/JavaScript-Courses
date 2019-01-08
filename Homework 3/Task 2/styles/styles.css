@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 4fr 4fr;
+}
+
+.box{
+    display: grid;
+    border: 1px solid red;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box1{
+    background: yellowgreen;
+}
+
+.box2{
+    background: rgb(67, 142, 240);
+}
+
+.box3{
+    background: rgb(238, 174, 54);
+}
+
+.box4{
+    background: rgb(235, 217, 58);
+}
+
+.box5{
+    background: rgb(64, 250, 58);
+}
+
+.box6{
+    background: rgb(164, 69, 243);
+}
+
+.box7{
+    background: rgb(50, 205, 97);
+}
+
+.box8{
+    background: rgb(49, 221, 252);
+}
+
+.box9{
+    background: rgb(247, 107, 64);
+}
+
+.box10{
+    background: rgb(238, 151, 38);
+}
+
+.box11{
+    background: rgb(71, 47, 15);
+}
+
+.box12{
+    background: rgb(238, 174, 54);
+}
+
+.box13{
+    background: rgb(83, 109, 35);
+}
+
+.box14{
+    background: rgb(110, 131, 223);
+}
+
+.box15{
+    background: rgb(25, 209, 241);
+}
+
+.box16{
+    background: rgb(247, 225, 34);
+}
+
+.box17{
+    background: rgb(231, 75, 35);
+}
+
+.box18{
+    background: rgb(60, 57, 245);
+}
+
+.box19{
+    background: rgb(118, 163, 245);
+}
+
+.box20{
+    background: rgb(147, 41, 247);
+}
+

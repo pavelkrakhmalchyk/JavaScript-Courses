@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background: rgba(88, 145, 219, 0.5);
+}
+
+header:hover{
+    background: rgba(32, 148, 84, 0.5);
+}
+
+.left-picture, .right-picture{
+    height: 80%;
+}
+
+.left-picture{
+    float: left;
+}
+
+.right-picture{
+    float: right;
+}
+
+#main-block{
+    position: fixed;
+    top: 15%;
+    width: 90%;
+    margin-left: 5%;
+    background: rgb(192, 203, 255);
+    border-left: solid rgb(65, 65, 238);
+    border-right: solid rgb(65, 65, 238);
+    margin-bottom: 50px;
+    padding: 10%;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    text-align: center;
+    background: rgba(88, 145, 219, 0.5);
+}
+
+footer:hover{
+    background: rgb(88, 145, 219);
+}
+
+
+
