@@ -1,17 +1,22 @@
-var newElement = document.createElement("div");
-
 var userName = prompt("What is your name?", "Unnamed");
+var fixedName = "";
 
 if (/\d/.test(userName)){
-    for (i = 0; i < userName.length; i+=2){
-        userName[i].toUpperCase();
+    userName = userName.toLowerCase();
+    for (i = 0; i < userName.length; i++){
+        if (i%2 != 0){
+            fixedName += userName[i].toUpperCase();
+        }
+        else{
+            fixedName += userName[i];
+        }
     }
-    newElement.innerHTML += userName;
 }
 else{
-    console.log("NO!");
+    fixedName = userName.split("").reverse().join("");
 }
 
-var container = document.getElementById("container");
-container.appendChild(newElement);
+var container = document.getElementById("container")
+container.innerHTML = "Changed name: " + fixedName;
+
 

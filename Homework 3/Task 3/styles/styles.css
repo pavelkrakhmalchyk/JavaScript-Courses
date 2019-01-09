@@ -13,7 +13,7 @@
     -ms-grid-template-rows: 100px 100px 100px;
 }
 
-.long-box,
+#long-box,
 .dark-box,
 .light-box{
     display: grid;
@@ -22,11 +22,11 @@
     font-size: 40px;
 }
 
-.dark-box, .light-box{
+.dark-box, .light-box, #long-box{
     border-radius: 10px;
 }
 
-.long-box{
+#long-box{
     grid-column-start: 3;
     grid-column-end: 6;
     grid-row-start: 2;

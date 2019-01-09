@@ -24,8 +24,8 @@
 }
 
 .sidebar{
-    z-index: 2;
     position: fixed;
+    z-index: 2;
     top: 5%;
     float: left;
     width: 10%;
@@ -62,7 +62,7 @@ footer{
     background: rgb(137, 196, 235);
     border-radius: 100px 100px 0px 0px;
     padding-left: 10%;
-    padding-bottom: 1vh;
+    padding-top: 1vh;
 }
 
 .footer-text{

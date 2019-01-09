@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+#container{
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 25%;
+    font-size: 60px;
+}
