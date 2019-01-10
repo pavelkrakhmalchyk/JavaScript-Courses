@@ -14,109 +14,124 @@ body{
     flex-wrap: wrap;
     align-content: flex-start;
     height: 100%;
+    width: 100%;
 }
 
 .box{
     margin: 0.5%;
 }
 
-@media (min-width: 1080px)
+.box1{
+    background: red;
+}
+
+.box2{
+    background: rgb(247, 140, 69);
+}
+
+.box3{
+    background: rgb(74, 218, 74);
+}
+
+.box4{
+    background: rgb(168, 58, 7);
+}
+
+.box5{
+    background: rgb(7, 93, 190);
+}
+
+.box6{
+    background: rgb(221, 30, 141);
+}
+
+@media (min-width: 1024px)
 {
     .box1{
         flex-basis: 40%;
-        height: 10%;
-        background: red;
     }
 
     .box2{
         flex-basis: 58%;
         height: 10%;
-        background: rgb(247, 140, 69);
     }
 
     .box3{
         height: 50%;
         margin-top: 2%;
         flex-basis: 99%;
-        background: rgb(74, 218, 74);
     }
 
     .box4{
         height: 30%;
         flex-basis: 32.3%;
-        background: rgb(168, 58, 7);
     }
 
     .box5{
         height: 30%;
         flex-basis: 32.3%;
-        background: rgb(7, 93, 190);
     }
 
     .box6{
         height: 30%;
         flex-basis: 32.3%;
-        background: rgb(221, 30, 141);
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px)
+@media (max-width: 1024px)
 {
     .box1{
-        height: 10%;
-        flex-basis: 40%;
-        background: rgb(247, 140, 69);
-    }
-
-    .box2{
-        height: 10%;
-        flex-basis: 58%;
-        background: rgb(221, 30, 141);
-    }
-
-    .box3{
         height: 56%;
         margin-top: 2%;
         flex-basis: 99%;
-        background: red;
-    }
-
-    .box4{
-        height: 30%;
-        flex-basis: 49%;
-        background:rgb(74, 218, 74);
-    }
-
-    .box5{
-        height: 30%;
-        flex-basis: 49%;
-        background: rgb(7, 93, 190);
-    }
-
-    .box6{
-        display: none;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 414px)
-{
-    .box1{
-        height: 15%;
-        flex-basis: 99%;
-        background: rgb(74, 218, 74);
+        order: 3;
     }
 
     .box2{
-        height: 15%;
-        margin-top: 4%;
-        flex-basis: 99%;
-        background: rgb(221, 30, 141);
+        height: 10%;
+        flex-basis: 40%;
+        order: 1;
     }
 
     .box3{
+        height: 25%;
+        flex-basis: 49%;
+        order: 4;
+    }
+
+    .box4{
+        display: none;
+    }
+
+    .box5{
+        height: 25%;
+        flex-basis: 49%;
+        order: 5;
+    }
+
+    .box6{
+        height: 10%;
+        flex-basis: 58%;
+        order: 2;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .box1{
         height: 49%;
         flex-basis: 99%;
-        background: red;
+        order: 3;
+    }
+
+    .box2{
+        display: none;
+    }
+
+    .box3{
+        height: 15%;
+        flex-basis: 99%;
+        order: 1;
     }
 
     .box4{
@@ -128,6 +143,9 @@ body{
     }
 
     .box6{
-        display: none;
+        height: 15%;
+        margin-top: 4%;
+        flex-basis: 99%;
+        order: 2;
     }
 }

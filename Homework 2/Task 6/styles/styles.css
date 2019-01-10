@@ -44,7 +44,7 @@ body{
     color: gray;
 }
 
-@media (max-width: 1920px){
+@media (min-width: 1280px){
     .main-container .product-card{
         width: 19.5%;
     }
