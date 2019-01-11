@@ -17,10 +17,6 @@ body{
     width: 100%;
 }
 
-.box{
-    margin: 0.5%;
-}
-
 .box1{
     background: red;
 }
@@ -47,43 +43,52 @@ body{
 
 @media (min-width: 1024px)
 {
+    .box{
+        border: 3px solid white;
+    }
+
     .box1{
         flex-basis: 40%;
+        height: 20%;
     }
 
     .box2{
-        flex-basis: 58%;
-        height: 10%;
+        flex-basis: 60%;
+        height: 20%;
     }
 
     .box3{
+        border-top: 20px solid white;
         height: 50%;
-        margin-top: 2%;
-        flex-basis: 99%;
+        flex-basis: 100%;
     }
 
     .box4{
         height: 30%;
-        flex-basis: 32.3%;
+        flex-basis: 33.3%;
     }
 
     .box5{
         height: 30%;
-        flex-basis: 32.3%;
+        flex-basis: 33.3%;
     }
 
     .box6{
         height: 30%;
-        flex-basis: 32.3%;
+        flex-basis: 33.3%;
     }
 }
 
 @media (max-width: 1024px)
 {
+    .box{
+        border: 3px solid white;
+    }
+
     .box1{
-        height: 56%;
-        margin-top: 2%;
-        flex-basis: 99%;
+        height: 60%;
+        border-top: 20px solid white;
+        flex-basis: 100%;
         order: 3;
     }
 
@@ -94,8 +99,8 @@ body{
     }
 
     .box3{
-        height: 25%;
-        flex-basis: 49%;
+        height: 30%;
+        flex-basis: 50%;
         order: 4;
     }
 
@@ -104,23 +109,27 @@ body{
     }
 
     .box5{
-        height: 25%;
-        flex-basis: 49%;
+        height: 30%;
+        flex-basis: 50%;
         order: 5;
     }
 
     .box6{
         height: 10%;
-        flex-basis: 58%;
+        flex-basis: 60%;
         order: 2;
     }
 }
 
-@media (max-width: 767px)
+@media (max-width: 560px)
 {
+    .box{
+        border: 3px solid white;
+    }
+
     .box1{
-        height: 49%;
-        flex-basis: 99%;
+        height: 50%;
+        flex-basis: 100%;
         order: 3;
     }
 
@@ -130,7 +139,7 @@ body{
 
     .box3{
         height: 15%;
-        flex-basis: 99%;
+        flex-basis: 100%;
         order: 1;
     }
 
@@ -144,8 +153,8 @@ body{
 
     .box6{
         height: 15%;
-        margin-top: 4%;
-        flex-basis: 99%;
+        border-top: 20px solid white;
+        flex-basis: 100%;
         order: 2;
     }
 }

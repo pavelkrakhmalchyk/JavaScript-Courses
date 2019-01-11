@@ -20,6 +20,7 @@ body{
     flex-basis: 250px;
     flex-shrink: 0;
     overflow-y: hidden;
+    transition-duration: 0.3s;
 }
 
 .senders-container:hover{
@@ -87,6 +88,7 @@ body{
 .own-message{
     display: flex;
     align-items: flex-end;
+    min-width: 100px;
     margin: 4px 5px 4px 5px;
 }
 
@@ -135,6 +137,12 @@ body{
 .own-message .message-text-without-image{
     margin-right: 60px;
     background: rgb(176, 255, 160);
+}
+
+@media (max-width: 430px){
+    .senders-container{
+       flex-basis: 190px;
+    };
 }
 
 

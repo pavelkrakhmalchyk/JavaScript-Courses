@@ -18,9 +18,14 @@ function generateNewSender(){
     return sender;
 }
 
-var sendersContainer = document.getElementsByClassName("senders-container")[0];
+function addSendersToSendersContainer(count){
+    var sendersContainer = document.getElementsByClassName("senders-container")[0];
 
-for (i = 0; i < 10; i++){
-    var sender = generateNewSender();
-    sendersContainer.appendChild(sender);
+    for (i = 0; i < count; i++){
+        var sender = generateNewSender();
+        sendersContainer.appendChild(sender);
+        }
 }
+
+addSendersToSendersContainer(10);
+
