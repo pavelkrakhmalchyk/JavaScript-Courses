@@ -3,12 +3,12 @@ var sendersContainer = document.getElementsByClassName("senders-container")[0];
 
 var messageHistory = generateMessageHistory(9);
 
-for ([key] of messageHistory){
+for ([key] of messageHistory) {
     addSenderToSendersContainer(key);
 }
 
 
-function generateNewSender(id, senderNameText){
+function generateNewSender(id, senderNameText) {
     var image = document.createElement("img");
     image.src = "../Task 2/images/sender-photo.jpg";
 
@@ -33,93 +33,95 @@ function generateNewSender(id, senderNameText){
 }
 
 
-function resetSelectedSenderColor(){
+function resetSelectedSenderColor() {
     var senders = document.getElementsByClassName("sender");
 
-    for (sender of senders){
-        if (sender.style.background == "rgba(37, 104, 131, 0.5)"){
+    for (sender of senders) {
+        if (sender.style.background == "rgba(37, 104, 131, 0.5)") {
             sender.removeAttribute("style");
         }
     }
 }
 
 
-function onSenderClick(){
+function onSenderClick() {
     var senderId = this.getAttribute("id");
-        var sender = document.getElementById(senderId);
+    var sender = document.getElementById(senderId);
 
-        resetSelectedSenderColor();
-        sender.style.background = "rgba(37, 104, 131, 0.5)";
+    resetSelectedSenderColor();
+    sender.style.background = "rgba(37, 104, 131, 0.5)";
 
-        var senderNameText = sender.getElementsByClassName("sender-name")[0];
-        var messagesContainerHeader = generateMessagesContainerHeader(senderNameText);
+    var senderNameText = sender.getElementsByClassName("sender-name")[0];
+    var messagesContainerHeader = generateMessagesContainerHeader(senderNameText);
 
-        addContentToMessagesContainer(messageHistory.get(this), messagesContainerHeader);
+    addContentToMessagesContainer(messageHistory.get(this), messagesContainerHeader);
 
-        var messagesContainerContent = document.getElementsByClassName("messages-container-content")[0];
-        messagesContainerContent.scrollTop = messagesContainerContent.scrollHeight;
+    var messagesContainerContent = document.getElementsByClassName("messages-container-content")[0];
+    messagesContainerContent.scrollTop = messagesContainerContent.scrollHeight;
 }
 
 
-function generateMessage(isOwnMessage, isWithImage, textMessage){
+function generateMessage(isOwnMessage, isWithImage, textMessage) {
     message = document.createElement("div");
-    if(isOwnMessage == true){
+    if (isOwnMessage == true) {
         message.classList.add("own-message");
-    }
-    else{
+    } else {
         message.classList.add("sender-message");
     }
 
     messageText = document.createElement("div");
-    if(isWithImage == true){
+    if (isWithImage == true) {
         messageText.classList.add("message-text");
-    }
-    else{
+    } else {
         messageText.classList.add("message-text-without-image");
     }
 
     messageText.textContent = textMessage;
 
-    if(isWithImage == true){
+    if (isWithImage == true) {
         var messagePhoto = document.createElement("div");
         messagePhoto.classList.add("message-photo");
         var image = document.createElement("img");
 
-        if(isOwnMessage == true){
+        if (isOwnMessage == true) {
             image.src = "../Task 2/images/own-photo.jpg";
             messagePhoto.appendChild(image);
 
             message.appendChild(messageText);
             message.appendChild(messagePhoto);
-        }
-        else{
+        } else {
             image.src = "../Task 2/images/sender-photo.jpg";
             messagePhoto.appendChild(image);
-            
+
             message.appendChild(messagePhoto);
             message.appendChild(messageText);
         }
-    }
-    else{
+    } else {
         message.appendChild(messageText);
     }
     return message;
 }
 
 
-function addSenderToSendersContainer(sender){
+function addSenderToSendersContainer(sender) {
     sendersContainer.appendChild(sender);
 }
 
 
-function generateArrayOfMessages(count){
+function generateArrayOfMessages(count) {
 
     var messagesArray = [];
+    var message;
+    var messageText;
 
-    for (i = 0; i < count; i++){
-        for (i = 0; i < 2; i++){
-            var messageText = "Hello";
-            var message = generateMessage(true, false, messageText);
+    for (i = 0; i < count; i++) {
+        messageText = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, eligendi suscipit. Quia distinctio est, delectus ipsum dolorem non vitae doloribus illo a nostrum eum nam quod deserunt debitis nihil? Exercitationem.";
+        message = generateMessage(true, false, messageText);
+        messagesArray.push(message);
+
+        for (j = 0; j < count; j++) {
+            messageText = "Hello";
+            message = generateMessage(true, false, messageText);
             messagesArray.push(message);
         }
 
@@ -127,11 +129,15 @@ function generateArrayOfMessages(count){
         message = generateMessage(true, true, messageText);
         messagesArray.push(message);
 
-        for (i = 0; i < 2; i++){
+        for (j = 0; j < count; j++) {
             messageText = "Hello";
             message = generateMessage(false, false, messageText);
             messagesArray.push(message);
         }
+
+        messageText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim earum, tempore praesentium consequuntur minima in dolorem quasi laboriosam iste recusandae porro incidunt animi corporis et aut minus quis nam aperiam.";
+        message = generateMessage(false, false, messageText);
+        messagesArray.push(message);
 
         messageText = "How are you?";
         message = generateMessage(false, true, messageText);
@@ -142,15 +148,15 @@ function generateArrayOfMessages(count){
 }
 
 
-function addContentToMessagesContainer(messagesArray, messagesContainerHeader){
+function addContentToMessagesContainer(messagesArray, messagesContainerHeader) {
     while (messagesContainer.firstChild) {
         messagesContainer.removeChild(messagesContainer.firstChild);
     }
-    
+
     var messagesContainerContent = document.createElement("div");
     messagesContainerContent.classList.add("messages-container-content");
 
-    for (var message of messagesArray){
+    for (var message of messagesArray) {
         messagesContainerContent.appendChild(message);
     }
 
@@ -159,7 +165,7 @@ function addContentToMessagesContainer(messagesArray, messagesContainerHeader){
 }
 
 
-function generateMessagesContainerHeader(senderNameText){
+function generateMessagesContainerHeader(senderNameText) {
     var messageContainerHeader = document.createElement("div");
     messageContainerHeader.classList.add("messages-container-header");
 
@@ -181,10 +187,10 @@ function generateMessagesContainerHeader(senderNameText){
 }
 
 
-function generateMessageHistory(sendersCount){
+function generateMessageHistory(sendersCount) {
     var messagesHistory = new Map();
 
-    for (var i = 0; i < sendersCount; i++){
+    for (var i = 0; i < sendersCount; i++) {
         var sender = generateNewSender(i, "Marlin" + (i + 1));
         var messagesWithThisSender = generateArrayOfMessages(i + 1);
 
@@ -193,5 +199,3 @@ function generateMessageHistory(sendersCount){
 
     return messagesHistory;
 }
-
-
