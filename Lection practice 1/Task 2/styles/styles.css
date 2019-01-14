@@ -16,9 +16,10 @@ body{
 }
 
 .senders-container{
-    height: 100%;
+    margin-top: 80px;
     flex-basis: 250px;
     flex-shrink: 0;
+    border-top: 1px solid rgb(240, 240, 240);
     overflow-y: hidden;
     transition-duration: 0.3s;
 }
@@ -77,10 +78,42 @@ body{
 }
 
 .messages-container{
+    display: flex;
+    flex-direction: column;
     flex-basis: 100%;
     flex-shrink: 1;
     background-image: url("../images/messages-background.jpg");
     background-size: contain;
+}
+
+.messages-container-header{
+    position: fixed;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    border-left: 1px solid rgb(240, 240, 240);
+    background: white;
+    width: 100%;
+}
+
+.messages-container-header .sender-photo{
+    margin-left: 10px;
+}
+
+.messages-container-header .sender-name{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.messages-container-header .sender-photo > img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.messages-container-content{
+    margin-top: 80px;
     overflow-y: auto;
 }
 
