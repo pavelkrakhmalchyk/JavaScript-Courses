@@ -84,5 +84,3 @@ function onCreateSpruce(){
   alert(spruce.toString());
 }
 
-console.log("sss");
-
