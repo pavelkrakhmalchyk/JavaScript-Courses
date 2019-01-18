@@ -36,9 +36,9 @@ function generateNewSender(id, senderNameText) {
 function resetSelectedSenderColor() {
     var senders = document.getElementsByClassName("sender");
 
-    for (sender of senders) {
-        if (sender.style.background == "rgba(37, 104, 131, 0.5)") {
-            sender.removeAttribute("style");
+    for (var i = 0; i < senders.length; i++) {
+        if (senders[i].style.background == "rgba(37, 104, 131, 0.5)") {
+            senders[i].removeAttribute("style");
         }
     }
 }

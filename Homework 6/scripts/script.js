@@ -62,4 +62,3 @@ function createTable(array){
     aNewBodyElement.appendChild(table);
     document.body = aNewBodyElement;
 }
-
