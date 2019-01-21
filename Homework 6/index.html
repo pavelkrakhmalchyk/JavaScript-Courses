@@ -8,6 +8,22 @@
     <link rel="stylesheet" type="text/css" href="../Homework 6/styles/styles.css" />
 </head>
 <body>
+    <button class="createButton" onclick="showAddEditForm(this)">Add new record</button>
+
+    <div id="popupWindow" class="modalWindow">
+        <div id="modalWindowTitle"></div>
+        <form>
+            <input id="id" type="hidden">
+            <label for="userId">User ID: </label>
+            <input id="userId" type="number">
+            <label for="title">Title: </label>
+            <input id="title" type="text">
+            <label for="body">Body: </label>
+            <input id="body" type="text">
+            <input id="popupWindowButton" type="button" value="OK">
+        </form>
+    </div>
+
     <script src="../Homework 6/scripts/script.js"></script>
 </body>
 </html>
