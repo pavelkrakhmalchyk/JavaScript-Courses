@@ -52,7 +52,7 @@
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     z-index: 1;
     bottom: 0%;
     width: 90%;
@@ -62,10 +62,11 @@ footer{
     background: rgb(137, 196, 235);
     border-radius: 100px 100px 0px 0px;
     padding-left: 10%;
-    padding-top: 1vh;
 }
 
 .footer-text{
+    position: fixed;
+    bottom: 0;
     font-size: 3vw;
     color: whitesmoke;
 }
