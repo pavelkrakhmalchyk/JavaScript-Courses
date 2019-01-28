@@ -3,11 +3,6 @@ var sendersContainer = document.getElementsByClassName("senders-container")[0];
 
 var messageHistory = generateMessageHistory(9);
 
-for ([key] of messageHistory) {
-    addSenderToSendersContainer(key);
-}
-
-
 function generateNewSender(id, senderNameText) {
     var image = document.createElement("img");
     image.src = "../Task 2/images/sender-photo.jpg";
@@ -156,8 +151,8 @@ function addContentToMessagesContainer(messagesArray, messagesContainerHeader) {
     var messagesContainerContent = document.createElement("div");
     messagesContainerContent.classList.add("messages-container-content");
 
-    for (var message of messagesArray) {
-        messagesContainerContent.appendChild(message);
+    for (var i = 0; i < messagesArray.length; i++) {
+        messagesContainerContent.appendChild(messagesArray[i]);
     }
 
     messagesContainer.appendChild(messagesContainerHeader);
@@ -193,6 +188,8 @@ function generateMessageHistory(sendersCount) {
     for (var i = 0; i < sendersCount; i++) {
         var sender = generateNewSender(i, "Marlin" + (i + 1));
         var messagesWithThisSender = generateArrayOfMessages(i + 1);
+
+        addSenderToSendersContainer(sender);
 
         messagesHistory.set(sender, messagesWithThisSender);
     }
