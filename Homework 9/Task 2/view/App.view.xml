@@ -1,0 +1,52 @@
+<mvc:View
+controllerName="sap.ui.demo.walkthrough.controller.App"
+	xmlns="sap.m"
+    displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <App class="sapUiSizeCompact">
+            <pages>
+                <Page title="People">
+                    <content>
+                        <Table
+                            id="PeopleList"
+                            items="{
+                                path: 'people>/value'
+                            }">
+                            <columns>
+                                <Column>
+                                    <Text text="Username"/>
+                                </Column>
+                                <Column>
+                                    <Text text="Firstname"/>
+                                </Column>
+                                <Column>
+                                    <Text text="Lastname"/>
+                                </Column>
+                                <Column>
+                                    <Text text="Gender"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{people>UserName}"/>
+                                    </cells>
+                                    <cells>
+                                        <Text text="{people>FirstName}"/>
+                                    </cells>
+                                    <cells>
+                                        <Text text="{people>LastName}"/>
+                                    </cells>
+                                    <cells>
+                                        <Text text="{people>Gender}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+    </mvc:View>
