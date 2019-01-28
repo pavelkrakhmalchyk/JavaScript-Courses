@@ -12,15 +12,16 @@ crud = new Crud();
 
 Crud.prototype.getAll = function() {
     var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', url, true);
-    xhr.send();
+    
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200){
             this.data =  JSON.parse(xhr.responseText);
             createTable(this.data);
         }          
-    }   
+    }  
+
+    xhr.open('GET', url, true);
+    xhr.send();
 } 
 
 Crud.prototype.create = function() {
@@ -29,17 +30,16 @@ Crud.prototype.create = function() {
 
     var json = JSON.stringify(this.data);
 
-    xhr.open('POST', url + this.data.id);
+    xhr.open('POST', url + this.data.id, true);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send(json);
 }
      
-
 Crud.prototype.delete = function(button) {
     this.data = button.parentNode.parentNode.cells[0].textContent;
     var xhr = new XMLHttpRequest();
 
-    xhr.open('DELETE', url + this.data);
+    xhr.open('DELETE', url + this.data, true);
     xhr.send();
 }
 
@@ -49,7 +49,7 @@ Crud.prototype.put = function () {
 
     var json = JSON.stringify(record);
 
-    xhr.open('PUT', url + record.id);
+    xhr.open('PUT', url + record.id, true);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send(json);
 }
