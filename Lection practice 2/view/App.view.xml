@@ -1,5 +1,5 @@
 <mvc:View
-controllerName="sap.ui.demo.db.controller.App"
+controllerName="sap.ui.demo.walkthrough.controller.App"
 	xmlns="sap.m"
     xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -20,7 +20,7 @@ controllerName="sap.ui.demo.db.controller.App"
 				<dependents>
 					<ObjectListItem
 						id="personExtended"
-						title="Username: {people>UserName} FirstName: {people>FirstName} LastName: {people>LastName}"
+						title="Username: {people>UserName}"
 						type="Active"
 						press = ".onItemSelected">
 					</ObjectListItem>

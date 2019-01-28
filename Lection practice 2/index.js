@@ -7,14 +7,14 @@ sap.ui.require([
 	"use strict";
 	sap.ui.getCore().attachInit(function () {
 		new ComponentContainer({
-			name: "sap.ui.demo.db",
+			name: "sap.ui.demo.walkthrough",
 			settings : {
-				id : "db"
+				id : "walkthrough"
 			}
 		}).placeAt("content");
 
 		var oResourceModel = new ResourceModel({
-			bundleName: "sap.ui.demo.db.i18n.i18n"
+			bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
 		});
 		sap.ui.getCore().setModel(oResourceModel, "i18n");
 

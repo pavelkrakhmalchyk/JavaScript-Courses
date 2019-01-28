@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/demo/db/controller/App.controller",
+	"sap/ui/demo/walkthrough/controller/App.controller",
 	"sap/ui/core/routing/History"
 ], function (AppController, History) {
 	"use strict";
-	return AppController.extend("sap.ui.demo.db.controller.Detail", {
+	return AppController.extend("sap.ui.demo.walkthrough.controller.Detail", {
 		onInit: function(){
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);

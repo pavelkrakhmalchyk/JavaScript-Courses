@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, UIComponent) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.db.controller.App", {
+	return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
 		onInit: function(){
 			console.log("oninit");
 		},
